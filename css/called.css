@@ -1,0 +1,257 @@
+/* Reset Bulma */
+.navbar-burger {
+    margin-left: 0;
+}
+/* Fim Reset Bulma */
+
+/* Menu */
+.navbar {
+    box-shadow: 0 0 5px #000;
+}
+.navbar-burger span {
+    background-color: #015374;
+    height: 3px;
+}
+
+.call-container-month {
+    margin-left: 65%;
+}
+.call-container-month label[for='month'] {
+    color: #015374;
+    font-size: .8em;
+    font-weight: normal;
+    text-align: right;
+    margin-top: 10%;
+}
+.call-container-month + span {
+    margin: 3% 0 0 3%;
+}
+/* Fim Menu */
+
+/* Main */
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Sistema de Chamados */
+.call-title {
+    color: #015374;
+    border-bottom: 1px solid #015374;
+    margin-bottom: 2%;
+}
+
+.call-panel > div:first-of-type {
+    border: 1px solid #015374;
+    border-radius: 5px;
+}
+.call-panel > div:first-of-type p:first-of-type {
+    margin-top: 5%;
+}
+.call-panel > div:first-of-type p {
+    color: #015374;
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+.call-panel > div:first-of-type p:last-of-type {
+    margin-bottom: 5%;
+}
+.call-panel > div:first-of-type b {
+    display: block;
+    text-align: center;
+    font-size: 6em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.call-indicators {
+    color: #fff;
+    margin: -4% 0 0 !important;
+}
+.call-indicators div:nth-of-type(1) {
+    background-color: #015374;
+    border-bottom-left-radius: 5px;
+}
+.call-indicators div:nth-of-type(2) {
+    background-color: #AA4643;
+    border-bottom-right-radius: 5px;
+}
+.call-indicators div p,
+.call-indicators b {
+    text-align: center;
+}
+.call-indicators b {
+    display: block;
+    font-size: 3em;
+    line-height: 1;
+}
+
+.call-google-charts {
+    width: 100%;
+    min-height: 510px;
+}
+div.call-graphic-title.call-graphic-legend {
+    position: relative;
+    z-index: 1;
+}
+div.call-graphic-legend h3 {
+    text-align: center;
+}
+div.call-graphic-legend h4 {
+    text-align: center;
+}
+div.call-graphic-title .call-row-bottom {
+    border-bottom: 1px solid #808080;
+    padding-bottom: 2%;
+}
+div.call-graphic-legend > div:last-of-type {
+    border: 1px solid #808080;
+    border-radius: 10px;
+    text-align: center;
+    width: 35%;
+    position: relative;
+    z-index: 25;
+    margin: -12% auto 6%;
+}
+div.call-graphic-legend > div:last-of-type p {
+    display: inline-block;
+    padding: 5px;
+}
+div.call-graphic-legend > div:last-of-type p:first-child:before,
+div.call-graphic-legend > div:last-of-type p:last-child:before {
+    content: 'legend';
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+}
+div.call-graphic-legend > div:last-of-type p:first-child:before {
+    background-color: #015374;
+    color: #015374;
+}
+div.call-graphic-legend > div:last-of-type p:last-child:before {
+    background-color: #AA4643;
+    color: #AA4643;
+}
+/* Fim Sistema de Chamados */
+
+/* Qualidade do Atendimento */
+#call-level-of-satisfaction-img,
+#call-level-of-satisfaction-trigger-c,
+#call-called-closed-img,
+#call-called-closed-trigger-c,
+#call-called-closure-region-img,
+#call-called-closure-region-trigger-c {
+    display: none !important;
+}
+
+.call-graphic-legend-zing-charts {
+    text-align: center;
+}
+#call-quality-service-is-5,
+#call-called-closed-is-5 {
+    position: relative;
+    z-index: 1;
+}
+#call-called-closed-is-5 {
+    margin-top: 7%;
+}
+#call-quality-service-is-7,
+#call-called-closed-is-7 {
+    position: relative;
+    margin-top: -20%;
+    z-index: 25;
+}
+#call-zing-charts-quality-service,
+#call-zing-charts-called-closed {
+    position: absolute;
+    top: 48%;
+    left: 46%;
+    color: #015374;
+}
+/* Fim Qualidade do Atendimento */
+
+/* Chamados Fechados */
+.call-closed {
+    margin-top: 5%;
+}
+#call-top-10-is-12 {
+    margin-top: 5%;
+}
+#call-closed-by-type-is-6 h3,
+#call-closed-by-problem-is-6 h3,
+#call-distribution-by-departments-is-6 h3,
+#call-called-closure-region-is-6 h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+/* Fim Chamados Fechados */
+/* Fim Main */
+
+@media (min-width: 1024px) {
+    /* Menu */
+    .call-container-month {
+        margin-left: 560%;
+    }
+
+    .call-container-month + span {
+        margin: 22% 0 0 15%;
+    }
+    /* Fim Menu */
+
+    /* Main */
+    main {
+        width: 80%;
+    }
+
+    /* Sistema de Chamados */
+    .call-panel > div:first-of-type p:last-of-type {
+        margin-bottom: 15%;
+    }
+    .call-indicators {
+        margin: -7% 0 0 !important;
+    }
+    /* Fim Sistema de Chamados */
+
+    /* Qualidade do Atendimento */
+    #call-quality-service-is-7 {
+        margin-top: 15%;
+    }
+    #call-called-closed-is-5 {
+        margin-top: -10%;
+    }
+    .call-graphic-legend-zing-charts {
+        margin-bottom: 0;
+    }
+    #call-called-closed-is-7 {
+        margin-top: 4%;
+    }
+    #call-zing-charts-quality-service {
+        left: 42%;
+    }
+    #call-zing-charts-called-closed {
+        top: 45%;
+        left: 42%;
+    }
+    #call-called-closed-is-5 > h4 {
+        font-size: 1.5em;
+    }
+
+    #call-closed-by-type-is-6 h3,
+    #call-closed-by-problem-is-6 h3,
+    #call-distribution-by-departments-is-6 h3,
+    #call-called-closure-region-is-6 h3 {
+        text-align: left;
+    }
+    /* Fim Qualidade do Atendimento */
+
+    /* Chamados Fechados */
+    .call-container-closed {
+        position: relative;
+        z-index: 25;
+        margin-top: -15%;
+    }
+    /* Fim Chamados Fechados */
+    /* Fim Main */
+}

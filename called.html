@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Chamados</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/libs/bulma.min.css">
+    <link rel="stylesheet" href="css/called.css">
+</head>
+<body class="has-navbar-fixed-top">
+    <div class="container is-fluid">
+        <header>
+            <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                    <div class="field call-container-month">
+                        <label for="month" class="label">Mudar visão do mês</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="month">
+                                    <option value="8">Agosto / 2018</option>
+                                    <option value="7">Julho / 2018</option>
+                                    <option value="6">Junho / 2018</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="icon">
+                        <i class="fas fa-print"></i>
+                    </span>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item">
+                            Chamados
+                        </a>
+                        <a class="navbar-item">
+                            Qualidade
+                        </a>
+                        <a class="navbar-item">
+                            Chamados Fechados
+                        </a>
+                        <a class="navbar-item">
+                            Técnicos
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Sistema de Chamados -->
+            <div class="columns is-desktop is-multiline">
+                <div class="column is-12 call-title">
+                    <h2 class="title">Sistema de Chamados</h2>
+                </div>
+                <div id="call-panel-is-5" class="column is-5 call-panel">
+                    <div class="box">
+                        <p>No momento</p>
+                        <b>139</b>
+                        <p>Chamados Abertos</p>
+                    </div>
+                    <div class="columns call-indicators">
+                        <div class="column is-6">
+                            <p>Dentro do Prazo</p>
+                            <b>96%</b>
+                        </div>
+                        <div class="column is-6">
+                            <p>Prazo Estourado</p>
+                            <b>4%</b>
+                        </div>
+                    </div>
+                </div>
+                <div id="call-graphic-open-is-7" class="column is-7">
+                    <div id="call-graphic-open" class="call-google-charts"></div>
+                </div>
+                <div id="call-graphic-comparation-is-12" class="column is-12 call-graphic-title call-graphic-legend">
+                    <h3 class="title call-row-bottom">Comparação Últimos 6 Meses</h3>
+                    <div id="call-graphic-comparation" class="call-google-charts"></div>
+                    <div>
+                        <p>Fechado</p>
+                        <p>Previsto</p>
+                    </div>
+                </div>
+                <div id="call-graphic-by-day-is-12" class="column is-12 call-graphic-title call-graphic-legend">
+                    <h3 class="title">Chamados Por Dia</h3>
+                    <h4 class="subtitle call-row-bottom">Média de chamados abertos nos últimos <span>7</span> dias</h4>
+                    <div id="call-graphic-by-day" class="call-google-charts"></div>
+                    <div>
+                        <p>Fechado</p>
+                        <p>Previsto</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Sistema de Chamados -->
+            <!-- Qualidade do Atendimento -->
+            <div class="columns is-desktop is-multiline">
+                <div class="column is-12 call-title">
+                    <h2 class="title">Qualidade do Atendimento</h2>
+                </div>
+                <div id="call-quality-service-is-5" class="column is-5">
+                    <h4 class="title call-graphic-legend-zing-charts">Nível de Satisfação</h4>
+                    <div id="call-level-of-satisfaction"></div>
+                    <p id="call-zing-charts-quality-service"></p>
+                </div>
+                <div id="call-quality-service-is-7" class="column is-7">
+                    <div id="call-level-of-satisfaction-months"></div>
+                </div>
+                <div id="call-called-closed-is-5" class="column is-5">
+                    <h4 class="title call-graphic-legend-zing-charts">Chamados Fechados Dentro do SLA</h4>
+                    <div id="call-called-closed"></div>
+                    <p id="call-zing-charts-called-closed"></p>
+                </div>
+                <div id="call-called-closed-is-7" class="column is-7">
+                    <div id="call-called-closed-months"></div>
+                </div>
+            </div>
+            <!-- Fim Qualidade do Atendimento -->
+            <!-- Chamados Fechados -->
+            <div class="columns is-desktop is-multiline call-container-closed">
+                <div class="column is-12 call-title call-closed">
+                    <h2 class="title">Chamados Fechados</h2>
+                </div>
+                <div id="call-top-10-is-12" class="column is-12 call-graphic-title call-graphic-legend">
+                    <h3 class="title">Top 10 Chamados Fechados Por Departamento</h3>
+                    <div id="call-top-10" class="call-google-charts"></div>
+                    <div>
+                        <p>Fechado</p>
+                        <p>Vencidos</p>
+                    </div>
+                </div>
+                <div id="call-closed-by-type-is-6" class="column is-6 call-graphic-title">
+                    <h3 class="title">Chamados Fechados Por Tipo Problema</h3>
+                    <div id="call-closed-by-type" class="call-google-charts"></div>
+                </div>
+                <div id="call-closed-by-problem-is-6" class="column is-6 call-graphic-title">
+                    <h3 class="title">Chamados Fechados Por Problema</h3>
+                    <div id="call-closed-by-problem" class="call-google-charts"></div>
+                </div>
+                <div id="call-distribution-by-departments-is-6" class="column is-6 call-graphic-title">
+                    <h3 class="title">Distribuição Por Departamentos</h3>
+                    <div id="call-distribution-by-departments" class="call-google-charts"></div>
+                </div>
+                <div id="call-called-closure-region-is-6" class="column is-6 call-graphic-title">
+                    <h3 class="title">Fechamento de Chamado/Região</h3>
+                    <div id="call-called-closure-region"></div>
+                </div>
+            </div>
+            <!-- Fim Chamados Fechados -->
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="js/google-charts.js"></script>
+    <script src="js/zing-charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
