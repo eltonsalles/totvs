@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    document.querySelector('#call-print').addEventListener('click', function () {
+        window.print();
+    });
 });
 
 function includeClass() {

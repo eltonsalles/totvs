@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/libs/bulma.min.css">
     <link rel="stylesheet" href="css/called.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body class="has-navbar-fixed-top">
     <div class="container is-fluid">
-        <header>
+        <header class="call-no-print">
             <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -30,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    <span class="icon">
+                    <span class="icon" id="call-print">
                         <i class="fas fa-print"></i>
                     </span>
                 </div>
@@ -64,7 +65,7 @@
                         <b>139</b>
                         <p>Chamados Abertos</p>
                     </div>
-                    <div class="columns call-indicators">
+                    <div class="columns call-indicators call-print-exact">
                         <div class="column is-6">
                             <p>Dentro do Prazo</p>
                             <b>96%</b>
@@ -76,12 +77,12 @@
                     </div>
                 </div>
                 <div id="call-graphic-open-is-7" class="column is-7">
-                    <div id="call-graphic-open" class="call-google-charts"></div>
+                    <div id="call-graphic-open" class="call-google-charts call-print-adjust-margin"></div>
                 </div>
                 <div id="call-graphic-comparation-is-12" class="column is-12 call-graphic-title call-graphic-legend">
                     <h3 class="title call-row-bottom">Comparação Últimos 6 Meses</h3>
-                    <div id="call-graphic-comparation" class="call-google-charts"></div>
-                    <div>
+                    <div id="call-graphic-comparation" class="call-google-charts call-print-adjust-margin"></div>
+                    <div class="call-print-exact">
                         <p>Fechado</p>
                         <p>Previsto</p>
                     </div>
@@ -89,8 +90,8 @@
                 <div id="call-graphic-by-day-is-12" class="column is-12 call-graphic-title call-graphic-legend">
                     <h3 class="title">Chamados Por Dia</h3>
                     <h4 class="subtitle call-row-bottom">Média de chamados abertos nos últimos <span>7</span> dias</h4>
-                    <div id="call-graphic-by-day" class="call-google-charts"></div>
-                    <div>
+                    <div id="call-graphic-by-day" class="call-google-charts call-print-adjust-margin"></div>
+                    <div class="call-print-exact">
                         <p>Fechado</p>
                         <p>Previsto</p>
                     </div>
@@ -98,7 +99,7 @@
             </div>
             <!-- Fim Sistema de Chamados -->
             <!-- Qualidade do Atendimento -->
-            <div class="columns is-desktop is-multiline">
+            <div class="columns is-desktop is-multiline call-page-break">
                 <div class="column is-12 call-title">
                     <h2 id="call-quality" class="title">Qualidade do Atendimento</h2>
                 </div>
@@ -110,7 +111,7 @@
                 <div id="call-quality-service-is-7" class="column is-7">
                     <div id="call-level-of-satisfaction-months"></div>
                 </div>
-                <div id="call-called-closed-is-5" class="column is-5">
+                <div id="call-called-closed-is-5" class="column is-5 call-page-break">
                     <h4 class="title call-graphic-legend-zing-charts">Chamados Fechados Dentro do SLA</h4>
                     <div id="call-called-closed"></div>
                     <p id="call-zing-charts-called-closed"></p>
@@ -121,14 +122,14 @@
             </div>
             <!-- Fim Qualidade do Atendimento -->
             <!-- Chamados Fechados -->
-            <div class="columns is-desktop is-multiline call-container-closed">
+            <div class="columns is-desktop is-multiline call-container-closed call-page-break">
                 <div class="column is-12 call-title call-closed">
                     <h2 id="call-called" class="title">Chamados Fechados</h2>
                 </div>
                 <div id="call-top-10-is-12" class="column is-12 call-graphic-title call-graphic-legend">
                     <h3 class="title">Top 10 Chamados Fechados Por Departamento</h3>
-                    <div id="call-top-10" class="call-google-charts"></div>
-                    <div>
+                    <div id="call-top-10" class="call-google-charts call-print-adjust-margin"></div>
+                    <div class="call-print-exact">
                         <p>Fechado</p>
                         <p>Vencidos</p>
                     </div>
@@ -145,7 +146,7 @@
                     <h3 class="title">Distribuição Por Departamentos</h3>
                     <div id="call-distribution-by-departments" class="call-google-charts"></div>
                 </div>
-                <div id="call-called-closure-region-is-6" class="column is-6 call-graphic-title">
+                <div id="call-called-closure-region-is-6" class="column is-6 call-graphic-title call-page-break">
                     <h3 class="title">Fechamento de Chamado/Região</h3>
                     <div id="call-called-closure-region"></div>
                 </div>
