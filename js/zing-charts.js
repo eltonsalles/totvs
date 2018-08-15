@@ -137,7 +137,12 @@ function callLevelOfSatisfaction() {
         id: 'call-level-of-satisfaction',
         data: myConfig,
         height: 510,
-        width: '100%'
+        width: '100%',
+        events: {
+            load: function () {
+                countDrawCharts();
+            }
+        }
     });
 
     labelSatisfaction('call-zing-charts-quality-service', value);
@@ -276,7 +281,12 @@ function callCalledClosed() {
         id: 'call-called-closed',
         data: myConfig,
         height: 510,
-        width: '100%'
+        width: '100%',
+        events: {
+            load: function () {
+                countDrawCharts();
+            }
+        }
     });
 
     labelSatisfaction('call-zing-charts-called-closed', value);
@@ -355,7 +365,12 @@ function calledClosureRegion() {
             id: 'call-called-closure-region',
             data: myConfig,
             height: 510,
-            width: '100%'
+            width: '100%',
+            events: {
+                load: function () {
+                    countDrawCharts();
+                }
+            }
         });
     });
 }

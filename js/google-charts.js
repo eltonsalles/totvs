@@ -1,3 +1,5 @@
+let numberDrawCharts = 0;
+
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(callOpen);
 google.charts.setOnLoadCallback(callComparationMonths);
@@ -47,6 +49,7 @@ function callOpen() {
     };
 
     let chart = new google.visualization.ColumnChart(document.querySelector('#call-graphic-open'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 
     let title = document.querySelector('#call-graphic-open > div > div > div > svg > g:nth-of-type(1) > text');
@@ -90,6 +93,7 @@ function callComparationMonths() {
     };
 
     let chart = new google.visualization.ColumnChart(document.querySelector('#call-graphic-comparation'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 }
 
@@ -119,6 +123,7 @@ function callByDay() {
     };
 
     let chart = new google.visualization.ColumnChart(document.querySelector('#call-graphic-by-day'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 }
 
@@ -152,6 +157,7 @@ function satisfactionMonths() {
     };
 
     let chart = new google.visualization.LineChart(document.querySelector('#call-level-of-satisfaction-months'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 
     let title = document
@@ -193,6 +199,7 @@ function satisfactionMonthsInsideSla() {
     };
 
     let chart = new google.visualization.LineChart(document.querySelector('#call-called-closed-months'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 
     let title = document
@@ -243,6 +250,7 @@ function callTop10() {
     };
 
     let chart = new google.visualization.ColumnChart(document.querySelector('#call-top-10'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 
     let title = document.querySelector('#call-top-10 > div > div > div > svg > g:nth-of-type(1) > text');
@@ -271,6 +279,7 @@ function drawingsClosedByTypeProblem() {
     }]);
 
     let chart = new google.visualization.PieChart(document.querySelector('#call-closed-by-type'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 }
 
@@ -292,6 +301,7 @@ function drawingsClosedByProblem() {
     }]);
 
     let chart = new google.visualization.PieChart(document.querySelector('#call-closed-by-problem'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 }
 
@@ -313,6 +323,7 @@ function distributionByDepartments() {
     }]);
 
     let chart = new google.visualization.PieChart(document.querySelector('#call-distribution-by-departments'));
+    google.visualization.events.addListener(chart, 'ready', countDrawCharts);
     chart.draw(data, options);
 }
 
