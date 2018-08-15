@@ -29,9 +29,13 @@
 /* Fim Menu */
 
 /* Main */
+.container {
+    max-width: 1280px;
+}
+
 main {
     width: 90%;
-    margin: 0 auto;
+    margin: 2% auto 0;
 }
 
 /* Sistema de Chamados */
@@ -137,6 +141,9 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
 /* Fim Sistema de Chamados */
 
 /* Qualidade do Atendimento */
+.zc-ref {
+    display: none !important;
+}
 #call-level-of-satisfaction-img,
 #call-level-of-satisfaction-trigger-c,
 #call-called-closed-img,
@@ -254,4 +261,46 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     }
     /* Fim Chamados Fechados */
     /* Fim Main */
+}
+
+@media (max-width: 1023px) {
+    /* Menu */
+    nav.navbar > div.navbar-brand,
+    nav.navbar > div.navbar-menu {
+        padding-top: 2%;
+    }
+    .navbar-burger span {
+        width: 32px;
+    }
+    .navbar-burger span:nth-child(1) {
+        top: calc(50% - 12px);
+    }
+    .navbar-burger span:nth-child(2) {
+        top: calc(50% - 4px);
+    }
+    .navbar-burger.is-active span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    /* Fim Menu */
+
+    /* Sistema de Chamados */
+    .call-panel > div:first-of-type b {
+        font-size: 12em;
+    }
+    .call-panel > div:first-of-type p {
+        font-size: 2em;
+    }
+    .call-indicators b {
+        font-size: 6em;
+    }
+    /* Fim Sistema de Chamados */
+
+    /* Chamados Fechados */
+    #call-closed-by-type-is-6 h3,
+    #call-closed-by-problem-is-6 h3,
+    #call-distribution-by-departments-is-6 h3,
+    #call-called-closure-region-is-6 h3 {
+        font-size: 2em;
+    }
+    /* Fim Chamados Fechados */
 }

@@ -48,6 +48,13 @@ function callOpen() {
 
     let chart = new google.visualization.ColumnChart(document.querySelector('#call-graphic-open'));
     chart.draw(data, options);
+
+    let title = document.querySelector('#call-graphic-open > div > div > div > svg > g:nth-of-type(1) > text');
+    if (screen.width < 1024) {
+        title.setAttribute('x', '730');
+    } else {
+        title.setAttribute('x', '410');
+    }
 }
 
 function callComparationMonths() {
@@ -147,9 +154,13 @@ function satisfactionMonths() {
     let chart = new google.visualization.LineChart(document.querySelector('#call-level-of-satisfaction-months'));
     chart.draw(data, options);
 
-    document
-        .querySelector('#call-level-of-satisfaction-months > div > div > div > svg > g:nth-of-type(1) > text')
-        .setAttribute('x', '40%');
+    let title = document
+        .querySelector('#call-level-of-satisfaction-months > div > div > div > svg > g:nth-of-type(1) > text');
+    if (screen.width < 1024) {
+        title.setAttribute('x', '525');
+    } else {
+        title.setAttribute('x', '225');
+    }
 }
 
 function satisfactionMonthsInsideSla() {
@@ -184,9 +195,13 @@ function satisfactionMonthsInsideSla() {
     let chart = new google.visualization.LineChart(document.querySelector('#call-called-closed-months'));
     chart.draw(data, options);
 
-    document
-        .querySelector('#call-called-closed-months > div > div > div > svg > g:nth-of-type(1) > text')
-        .setAttribute('x', '40%');
+    let title = document
+        .querySelector('#call-called-closed-months > div > div > div > svg > g:nth-of-type(1) > text');
+    if (screen.width < 1024) {
+        title.setAttribute('x', '525');
+    } else {
+        title.setAttribute('x', '225');
+    }
 }
 
 function callTop10() {
@@ -230,7 +245,12 @@ function callTop10() {
     let chart = new google.visualization.ColumnChart(document.querySelector('#call-top-10'));
     chart.draw(data, options);
 
-    document.querySelector('#call-top-10 > div > div > div > svg > g:nth-of-type(1) > text').setAttribute('x', '88%');
+    let title = document.querySelector('#call-top-10 > div > div > div > svg > g:nth-of-type(1) > text');
+    if (screen.width < 1024) {
+        title.setAttribute('x', '760');
+    } else {
+        title.setAttribute('x', '860');
+    }
 }
 
 function drawingsClosedByTypeProblem() {

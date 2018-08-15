@@ -349,8 +349,6 @@ function calledClosureRegion() {
         myConfig.shapes.push(obj);
     });
 
-    console.log(myConfig);
-
     zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
     zingchart.loadModules('maps, maps-bra', function() {
         zingchart.render({
