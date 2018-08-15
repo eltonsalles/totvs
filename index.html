@@ -21,7 +21,7 @@
                     <div class="field call-container-month">
                         <label for="month" class="label">Mudar visão do mês</label>
                         <div class="control">
-                            <div class="select">
+                            <div class="select" id="call-month">
                                 <select id="month">
                                     <option value="8">Agosto / 2018</option>
                                     <option value="7">Julho / 2018</option>
@@ -36,13 +36,13 @@
                 </div>
                 <div class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item">
+                        <a href="#call-system" class="navbar-item">
                             Chamados
                         </a>
-                        <a class="navbar-item">
+                        <a href="#call-quality" class="navbar-item">
                             Qualidade
                         </a>
-                        <a class="navbar-item">
+                        <a href="#call-called" class="navbar-item">
                             Chamados Fechados
                         </a>
                         <a class="navbar-item">
@@ -56,7 +56,7 @@
             <!-- Sistema de Chamados -->
             <div class="columns is-desktop is-multiline">
                 <div class="column is-12 call-title">
-                    <h2 class="title">Sistema de Chamados</h2>
+                    <h2 id="call-system" class="title">Sistema de Chamados</h2>
                 </div>
                 <div id="call-panel-is-5" class="column is-5 call-panel">
                     <div class="box">
@@ -100,7 +100,7 @@
             <!-- Qualidade do Atendimento -->
             <div class="columns is-desktop is-multiline">
                 <div class="column is-12 call-title">
-                    <h2 class="title">Qualidade do Atendimento</h2>
+                    <h2 id="call-quality" class="title">Qualidade do Atendimento</h2>
                 </div>
                 <div id="call-quality-service-is-5" class="column is-5">
                     <h4 class="title call-graphic-legend-zing-charts">Nível de Satisfação</h4>
@@ -123,7 +123,7 @@
             <!-- Chamados Fechados -->
             <div class="columns is-desktop is-multiline call-container-closed">
                 <div class="column is-12 call-title call-closed">
-                    <h2 class="title">Chamados Fechados</h2>
+                    <h2 id="call-called" class="title">Chamados Fechados</h2>
                 </div>
                 <div id="call-top-10-is-12" class="column is-12 call-graphic-title call-graphic-legend">
                     <h3 class="title">Top 10 Chamados Fechados Por Departamento</h3>

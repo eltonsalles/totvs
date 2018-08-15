@@ -1,6 +1,6 @@
 /* Reset Bulma */
 .navbar-burger {
-    margin-left: 0;
+    margin-left: 10px;
 }
 /* Fim Reset Bulma */
 
@@ -141,15 +141,14 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
 /* Fim Sistema de Chamados */
 
 /* Qualidade do Atendimento */
-.zc-ref {
-    display: none !important;
-}
 #call-level-of-satisfaction-img,
 #call-level-of-satisfaction-trigger-c,
 #call-called-closed-img,
 #call-called-closed-trigger-c,
 #call-called-closure-region-img,
-#call-called-closure-region-trigger-c {
+#call-called-closure-region-trigger-c,
+#call-called-closure-region-license-text,
+.zc-ref{
     display: none !important;
 }
 
@@ -204,8 +203,7 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: .7;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 9999;
 }
 
@@ -311,16 +309,34 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
         padding-top: 2%;
     }
     .navbar-burger span {
-        width: 32px;
+        width: 48px;
+        height: 6px;
+        left: calc(50% - 22px);
     }
     .navbar-burger span:nth-child(1) {
-        top: calc(50% - 12px);
+        top: calc(50% - 18px);
     }
     .navbar-burger span:nth-child(2) {
-        top: calc(50% - 4px);
+        top: calc(50% - 7px);
     }
     .navbar-burger.is-active span:nth-child(1) {
-        transform: translateY(11px) rotate(45deg);
+        transform: translateY(17px) rotate(45deg);
+    }
+
+    span.icon i {
+        font-size: 2em;
+    }
+
+    .navbar-menu div  a.navbar-item {
+        font-size: 3em;
+    }
+
+    .call-container-month {
+        margin-left: 60%;
+    }
+
+    .call-container-month + span {
+        margin-top: 5%;
     }
     /* Fim Menu */
 
@@ -345,7 +361,7 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     }
 
     #call-called-closure-region {
-        padding-bottom: 200px;
+        padding-bottom: 100px;
     }
     /* Fim Chamados Fechados */
 }
