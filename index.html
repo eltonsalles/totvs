@@ -62,7 +62,7 @@
                 <div id="call-panel-is-5" class="column is-5 call-panel">
                     <div class="box">
                         <p>No momento</p>
-                        <b>139</b>
+                        <b id="call-open-all-modal">139</b>
                         <p>Chamados Abertos</p>
                     </div>
                     <div class="columns call-indicators call-print-exact">
@@ -154,8 +154,60 @@
             <!-- Fim Chamados Fechados -->
         </main>
     </div>
-    <div id="call-loading-charts">
-        <div class="call-loader"></div>
+    <div id="call-loading-charts" class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="call-loader"></div>
+        </div>
+    </div>
+    <div id="call-table" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"></p>
+                <button class="delete call-modal-close" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuário</th>
+                        <th>Departamento</th>
+                        <th>Resumo</th>
+                        <th>SLA</th>
+                        <th>Técnico</th>
+                        <th>Data Abertura</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>123456</td>
+                        <td>Fernanda Aparecida</td>
+                        <td>Fiscal</td>
+                        <td>Resumo do chamado</td>
+                        <td>100</td>
+                        <td>Desen - Fulano</td>
+                        <td>03/08/2018 08:56</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav class="pagination is-rounded is-centered" role="navigation" aria-label="pagination">
+                    <a class="pagination-previous">Previous</a>
+                    <a class="pagination-next">Next page</a>
+                    <ul class="pagination-list">
+                        <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                        <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                        <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                        <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <footer class="modal-card-foot"></footer>
+        </div>
     </div>
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
