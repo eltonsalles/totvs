@@ -1,8 +1,4 @@
 /* Reset Bulma */
-.navbar-burger {
-    margin-left: 10px;
-}
-
 .table {
     margin: 0 auto;
 }
@@ -16,6 +12,9 @@
     background-color: #015374;
     height: 3px;
 }
+.navbar-burger {
+    margin: 4% 0 0 40px;
+}
 
 .call-container-month {
     margin-left: 65%;
@@ -25,10 +24,24 @@
     font-size: .8em;
     font-weight: normal;
     text-align: right;
-    margin-top: 10%;
+    margin-top: 2%;
 }
+div.select.is-large {
+    font-size: 2em;
+}
+
+.navbar-item:not(:last-of-type) {
+    border-right: 1px solid;
+    border-image: linear-gradient(to bottom, #fff 0, #fff 33%, #015374 33%, #015374 66%, #fff 66%, #fff 100%) 1 100%;
+}
+
 .call-container-month + span {
-    margin: 3% 0 0 3%;
+    margin: 3% 0 0 4%;
+}
+
+span.icon i {
+    font-size: 1.5em;
+    cursor: pointer;
 }
 /* Fim Menu */
 
@@ -247,7 +260,7 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     }
 
     .call-container-month + span {
-        margin: 22% 0 0 15%;
+        margin: 18% 0 0 10%;
     }
     /* Fim Menu */
 
@@ -319,17 +332,17 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
         left: calc(50% - 22px);
     }
     .navbar-burger span:nth-child(1) {
-        top: calc(50% - 18px);
+        top: calc(50% - 21px);
     }
     .navbar-burger span:nth-child(2) {
-        top: calc(50% - 7px);
+        top: calc(50% - 9px);
     }
     .navbar-burger.is-active span:nth-child(1) {
-        transform: translateY(17px) rotate(45deg);
+        transform: translateY(19px) rotate(45deg);
     }
 
     span.icon i {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     .navbar-menu div  a.navbar-item {
@@ -337,7 +350,7 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     }
 
     .call-container-month {
-        margin-left: 60%;
+        margin-left: 48%;
     }
 
     .call-container-month + span {
