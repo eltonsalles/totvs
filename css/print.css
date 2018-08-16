@@ -14,6 +14,38 @@
     -webkit-print-color-adjust: exact;
 }
 
-.call-print-adjust-margin {
-    margin-left: -5%;
+.call-print-center {
+    margin: 0 auto !important;
 }
+
+.call-print-adjust-margin {
+    margin-left: -5% !important;
+}
+
+/* Sistema de Chamados */
+.call-indicators {
+    margin-top: -8% !important;
+}
+.call-indicators b {
+    font-size: 2em;
+}
+
+#call-graphic-comparation-is-12 {
+    margin-top: 10% !important;
+}
+/* Fim Sistema de Chamados */
+
+/* Qualidade do Atendimento */
+#call-quality-service-is-7 {
+    margin-top: -20% !important;
+}
+#call-title-sla {
+    margin-top: 6% !important;
+}
+#call-called-closed-is-5 {
+    margin-top: 1% !important;
+}
+#call-called-closed-is-7 {
+    margin-top: -20% !important;
+}
+/* Fim Qualidade do Atendimento */

@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 case 1:
                      setTimeout(function () {
-                        window.scroll({ top: 2386, left: 0, behavior: "smooth" });
+                        window.scroll({ top: 1686, left: 0, behavior: "smooth" });
                     }, 100);
                     break;
 
                 case 2:
                     setTimeout(function () {
-                        window.scroll({ top: 3829, left: 0, behavior: "smooth" });
+                        window.scroll({ top: 2520, left: 0, behavior: "smooth" });
                     }, 100);
                     break;
             }
@@ -60,7 +60,6 @@ function includeClass() {
     let callClosedByProblemIs6 = document.querySelector('#call-closed-by-problem-is-6');
     let callDistributionByDepartmentsIs6 = document.querySelector('#call-distribution-by-departments-is-6');
     let callCalledClosureRegionIs6 = document.querySelector('#call-called-closure-region-is-6');
-    let callMonth = document.querySelector('#call-month');
 
     if (screen.width < 1024) {
         callPanelIs5.classList.remove('is-5');
@@ -75,7 +74,6 @@ function includeClass() {
         callClosedByProblemIs6.classList.remove('is-6');
         callDistributionByDepartmentsIs6.classList.remove('is-6');
         callCalledClosureRegionIs6.classList.remove('is-6');
-        callMonth.classList.add('is-large');
     } else {
         callPanelIs5.classList.add('is-5');
         callGraphicOpenIs7.classList.add('is-7');
@@ -89,7 +87,6 @@ function includeClass() {
         callClosedByProblemIs6.classList.add('is-6');
         callDistributionByDepartmentsIs6.classList.add('is-6');
         callCalledClosureRegionIs6.classList.add('is-6');
-        callMonth.classList.remove('is-large');
     }
 }
 

@@ -1,6 +1,16 @@
 /* Reset Bulma */
+html.has-navbar-fixed-top {
+    padding-top: 2em;
+}
+
 .table {
     margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    position: relative;
+    z-index: 10;
 }
 /* Fim Reset Bulma */
 
@@ -16,18 +26,8 @@
     margin: 4% 0 0 40px;
 }
 
-.call-container-month {
-    margin-left: 65%;
-}
-.call-container-month label[for='month'] {
-    color: #015374;
-    font-size: .8em;
-    font-weight: normal;
-    text-align: right;
-    margin-top: 2%;
-}
-div.select.is-large {
-    font-size: 2em;
+div.navbar-menu .navbar-start {
+    margin-left: 10%;
 }
 
 .navbar-item:not(:last-of-type) {
@@ -35,11 +35,12 @@ div.select.is-large {
     border-image: linear-gradient(to bottom, #fff 0, #fff 33%, #015374 33%, #015374 66%, #fff 66%, #fff 100%) 1 100%;
 }
 
-.call-container-month + span {
-    margin: 3% 0 0 4%;
+#call-print {
+    position: absolute;
+    right: 0;
+    margin: 1% 13% 0 0;
 }
-
-span.icon i {
+#call-print i {
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -56,6 +57,9 @@ main {
 }
 
 /* Sistema de Chamados */
+#call-by-day-title {
+    padding-bottom: 1.5rem;
+}
 .call-title {
     color: #015374;
     border-bottom: 1px solid #015374;
@@ -86,6 +90,7 @@ main {
     font-weight: 900;
     line-height: 1;
     cursor: pointer;
+    color: #015374;
 }
 
 .call-indicators {
@@ -156,6 +161,14 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     background-color: #AA4643;
     color: #AA4643;
 }
+
+.call-graphic-title h3.title {
+    margin-bottom: 0;
+}
+
+#call-graphic-comparation-is-12 {
+    margin-top: -10%;
+}
 /* Fim Sistema de Chamados */
 
 /* Qualidade do Atendimento */
@@ -170,45 +183,56 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     display: none !important;
 }
 
-.call-graphic-legend-zing-charts {
-    text-align: center;
+.call-container-graphic-title-zing-charts {
+    padding: 0;
+}
+#call-quality-service-is-7 + .call-container-graphic-title-zing-charts {
+    margin-top: -15%;
 }
 #call-quality-service-is-5,
 #call-called-closed-is-5 {
     position: relative;
     z-index: 1;
+    margin-top: -5%;
 }
 #call-called-closed-is-5 {
-    margin-top: 7%;
+    margin-top: -15%;
 }
 #call-quality-service-is-7,
 #call-called-closed-is-7 {
     position: relative;
-    margin-top: -20%;
+    margin-top: 3%;
     z-index: 25;
+}
+#call-called-closed-is-7 {
+    margin-top: -6%;
 }
 #call-zing-charts-quality-service,
 #call-zing-charts-called-closed {
     position: absolute;
-    top: 48%;
+    top: 42%;
     left: 46%;
     color: #015374;
 }
 /* Fim Qualidade do Atendimento */
 
 /* Chamados Fechados */
-.call-closed {
-    margin-top: 5%;
-}
-#call-top-10-is-12 {
-    margin-top: 5%;
-}
 #call-closed-by-type-is-6 h3,
 #call-closed-by-problem-is-6 h3,
 #call-distribution-by-departments-is-6 h3,
 #call-called-closure-region-is-6 h3 {
     font-size: 1.5em;
     text-align: center;
+}
+
+#call-closed-by-type,
+#call-closed-by-problem {
+    margin-top: -6%;
+}
+
+#call-distribution-by-departments-is-6,
+#call-called-closure-region-is-6 {
+    margin-top: -8%;
 }
 /* Fim Chamados Fechados */
 
@@ -254,16 +278,6 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
 /* Fim Main */
 
 @media (min-width: 1024px) {
-    /* Menu */
-    .call-container-month {
-        margin-left: 560%;
-    }
-
-    .call-container-month + span {
-        margin: 18% 0 0 10%;
-    }
-    /* Fim Menu */
-
     /* Main */
     main {
         width: 80%;
@@ -279,27 +293,12 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     /* Fim Sistema de Chamados */
 
     /* Qualidade do Atendimento */
-    #call-quality-service-is-7 {
-        margin-top: 15%;
-    }
-    #call-called-closed-is-5 {
-        margin-top: -10%;
-    }
-    .call-graphic-legend-zing-charts {
-        margin-bottom: 0;
-    }
-    #call-called-closed-is-7 {
-        margin-top: 4%;
-    }
     #call-zing-charts-quality-service {
         left: 42%;
     }
     #call-zing-charts-called-closed {
-        top: 45%;
+        top: 42%;
         left: 42%;
-    }
-    #call-called-closed-is-5 > h4 {
-        font-size: 1.5em;
     }
 
     #call-closed-by-type-is-6 h3,
@@ -314,7 +313,7 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     .call-container-closed {
         position: relative;
         z-index: 25;
-        margin-top: -15%;
+        margin-top: -18%;
     }
     /* Fim Chamados Fechados */
     /* Fim Main */
@@ -325,6 +324,9 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     nav.navbar > div.navbar-brand,
     nav.navbar > div.navbar-menu {
         padding-top: 2%;
+    }
+    .navbar-burger {
+        margin-top: 0;
     }
     .navbar-burger span {
         width: 48px;
@@ -348,15 +350,13 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     .navbar-menu div  a.navbar-item {
         font-size: 3em;
     }
-
-    .call-container-month {
-        margin-left: 48%;
-    }
-
-    .call-container-month + span {
-        margin-top: 5%;
-    }
     /* Fim Menu */
+
+    /* Main */
+    main {
+        margin-top: 10%;
+    }
+    /* Fim Main */
 
     /* Sistema de Chamados */
     .call-panel > div:first-of-type b {
@@ -369,6 +369,28 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
         font-size: 6em;
     }
     /* Fim Sistema de Chamados */
+
+    /* Qualidade do Atendimento */
+    #call-level-of-satisfaction-title {
+        padding-bottom: 2em;
+    }
+
+    #call-quality-service-is-7 {
+        margin-top: -20%;
+    }
+
+    #call-quality-service-is-7 + .call-container-graphic-title-zing-charts {
+        margin-top: 8%;
+    }
+
+    #call-called-closed-is-5 {
+        margin-top: 3%;
+    }
+
+    #call-called-closed-is-7 {
+        margin-top: -20%;
+    }
+    /* Fim Qualidade do Atendimento */
 
     /* Chamados Fechados */
     #call-closed-by-type-is-6 h3,

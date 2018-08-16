@@ -147,7 +147,8 @@ function satisfactionMonths() {
                 color: '#015374',
                 fontSize: 14,
                 bold: true
-            }
+            },
+            minTextSpacing: 20
         },
         vAxis: {
             format: '##,##%',
@@ -156,7 +157,11 @@ function satisfactionMonths() {
             }
         },
         pointSize: 10,
-        lineWidth: 5
+        lineWidth: 5,
+        chartArea: {
+            width: '90%',
+            left: '10%'
+        }
     };
 
     let chart = new google.visualization.LineChart(document.querySelector('#call-level-of-satisfaction-months'));
@@ -168,7 +173,7 @@ function satisfactionMonths() {
     if (screen.width < 1024) {
         title.setAttribute('x', '525');
     } else {
-        title.setAttribute('x', '225');
+        title.setAttribute('x', '300');
     }
 }
 
@@ -189,7 +194,8 @@ function satisfactionMonthsInsideSla() {
                 color: '#015374',
                 fontSize: 14,
                 bold: true
-            }
+            },
+            minTextSpacing: 20
         },
         vAxis: {
             format: '##,##%',
@@ -198,7 +204,11 @@ function satisfactionMonthsInsideSla() {
             }
         },
         pointSize: 10,
-        lineWidth: 5
+        lineWidth: 5,
+        chartArea: {
+            width: '90%',
+            left: '10%'
+        }
     };
 
     let chart = new google.visualization.LineChart(document.querySelector('#call-called-closed-months'));
@@ -210,7 +220,7 @@ function satisfactionMonthsInsideSla() {
     if (screen.width < 1024) {
         title.setAttribute('x', '525');
     } else {
-        title.setAttribute('x', '225');
+        title.setAttribute('x', '300');
     }
 }
 
