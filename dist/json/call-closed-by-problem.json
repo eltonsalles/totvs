@@ -1,0 +1,74 @@
+{
+  "cols": [{
+    "id": "",
+    "label": "Categorias",
+    "pattern": "",
+    "type": "string"
+  }, {
+    "id": "",
+    "label": "valores",
+    "pattern": "",
+    "type": "number"
+  }],
+  "rows": [{
+    "c": [{
+      "v": "Protheus"
+    }, {
+      "v": 2000
+    }]
+  }, {
+    "c": [{
+      "v": "Desktop"
+    }, {
+      "v": 900
+    }]
+  }, {
+    "c": [{
+      "v": "GOL"
+    }, {
+      "v": 500
+    }]
+  }, {
+    "c": [{
+      "v": "Impressora"
+    }, {
+      "v": 230
+    }]
+  }, {
+    "c": [{
+      "v": "Fixa"
+    }, {
+      "v": 50
+    }]
+  }, {
+    "c": [{
+      "v": "Mercury"
+    }, {
+      "v": 59
+    }]
+  }, {
+    "c": [{
+      "v": "Rede"
+    }, {
+      "v": 456
+    }]
+  }, {
+    "c": [{
+      "v": "Skype"
+    }, {
+      "v": 50
+    }]
+  }, {
+    "c": [{
+      "v": "Periféricos"
+    }, {
+      "v": 50
+    }]
+  }, {
+    "c": [{
+      "v": "Mais que um Sistema"
+    }, {
+      "v": 50
+    }]
+  }]
+}
