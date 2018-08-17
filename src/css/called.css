@@ -373,15 +373,32 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
 
     /* Sistema de Chamados */
     .call-panel > div:first-of-type b {
-        font-size: 12em;
+        font-size: 10em;
     }
     .call-panel > div:first-of-type p {
         font-size: 2em;
     }
     .call-indicators b {
-        font-size: 6em;
+        font-size: 3em;
+    }
+
+    .call-indicators {
+        margin-top: -9% !important;
+    }
+    .call-indicators div:nth-of-type(1) {
+        float: left;
+        width: 50%;
+    }
+
+    div.call-graphic-legend > div:last-of-type {
+        width: 90%;
+        margin-top: -25%;
     }
     /* Fim Sistema de Chamados */
+
+    #call-quality-service-is-5 {
+        margin-top: -20%;
+    }
 
     /* Qualidade do Atendimento */
     #call-level-of-satisfaction-title {
@@ -389,7 +406,7 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     }
 
     #call-quality-service-is-7 {
-        margin-top: -20%;
+        margin-top: -55%;
     }
 
     #call-quality-service-is-7 + .call-container-graphic-title-zing-charts {
@@ -397,10 +414,14 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     }
 
     #call-called-closed-is-5 {
-        margin-top: 3%;
+        margin-top: -20%;
     }
 
     #call-called-closed-is-7 {
+        margin-top: -63%;
+    }
+
+    #call-called-closed-is-5 {
         margin-top: -20%;
     }
     /* Fim Qualidade do Atendimento */
@@ -415,6 +436,12 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
 
     #call-called-closure-region {
         padding-bottom: 100px;
+    }
+
+    #call-closed-by-problem-is-6,
+    #call-distribution-by-departments-is-6,
+    #call-called-closure-region-is-6 {
+        margin-top: -30%;
     }
     /* Fim Chamados Fechados */
 }
@@ -451,6 +478,10 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     .pagination-list li {
         list-style-type: none;
         color: transparent;
+    }
+
+    #call-level-of-satisfaction-title {
+        padding-top: 10px;
     }
 }
 /* Fim Ajustes no IE11 e Edge */

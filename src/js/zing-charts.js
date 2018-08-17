@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function callLevelOfSatisfaction() {
-    let value = 76;
-    let myConfig = {
+    var value = 76;
+    var myConfig = {
         gui: {
             behaviors: [
                 {
@@ -32,7 +32,7 @@ function callLevelOfSatisfaction() {
                 {
                     id: "ViewSource",
                     enabled: "none"
-                },
+                }
             ]
         },
         type: "gauge",
@@ -93,7 +93,7 @@ function callLevelOfSatisfaction() {
                         offsetX: 1
                     }
                 ],
-                fontSize: 10,
+                fontSize: 10
             },
             labels: ['0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%'],
             ring: {
@@ -128,7 +128,7 @@ function callLevelOfSatisfaction() {
                     method: 4,
                     sequence: 4,
                     speed: 900
-                },
+                }
             }
         ]
     };
@@ -149,8 +149,8 @@ function callLevelOfSatisfaction() {
 }
 
 function callCalledClosed() {
-    let value = 57;
-    let myConfig = {
+    var value = 57;
+    var myConfig = {
         gui: {
             behaviors: [
                 {
@@ -176,7 +176,7 @@ function callCalledClosed() {
                 {
                     id: "ViewSource",
                     enabled: "none"
-                },
+                }
             ]
         },
         type: "gauge",
@@ -237,7 +237,7 @@ function callCalledClosed() {
                         offsetX: 1
                     }
                 ],
-                fontSize: 10,
+                fontSize: 10
             },
             labels: ['0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%'],
             ring: {
@@ -272,7 +272,7 @@ function callCalledClosed() {
                     method: 4,
                     sequence: 4,
                     speed: 900
-                },
+                }
             }
         ]
     };
@@ -293,7 +293,7 @@ function callCalledClosed() {
 }
 
 function calledClosureRegion() {
-    let listOfStatesLonLat = [
+    var listOfStatesLonLat = [
         {uf: "AC", x: "-69.2lon", y: "-9.8lat", size: 0},
         {uf: "AL", x: "-36.6127lon", y: "-9.5230lat", size: 0},
         {uf: "AM", x: "-64.6976lon", y: "-4.1991lat", size: 0},
@@ -323,7 +323,7 @@ function calledClosureRegion() {
         {uf: "TO", x: "-48.3213lon", y: "-10.1514lat", size: 0}
     ];
 
-    let myConfig = {
+    var myConfig = {
         shapes: [
             {
                 type: 'zingchart.maps',
@@ -337,7 +337,7 @@ function calledClosureRegion() {
                         controls: {
                             visible: false
                         },
-                        backgroundColor: '#109618',
+                        backgroundColor: '#109618'
                     }
                 }
             }
@@ -345,7 +345,7 @@ function calledClosureRegion() {
     };
 
     listOfStatesLonLat.forEach(function (state) {
-        let obj = {
+        var obj = {
             map: 'bra',
             type: 'circle',
             backgroundColor: '#efd843',
@@ -353,7 +353,7 @@ function calledClosureRegion() {
             alpha: 0.7,
             x: state.x,
             y: state.y,
-            size: Math.floor(Math.random() * 20 + 1),
+            size: Math.floor(Math.random() * 20 + 1)
         };
 
         myConfig.shapes.push(obj);
@@ -376,7 +376,7 @@ function calledClosureRegion() {
 }
 
 function labelSatisfaction(id, value) {
-    let label = document.querySelector('#' + id);
+    var label = document.querySelector('#' + id);
     if (value <= 40) {
         label.innerText = "Ruim";
     } else if (value > 40 && value <= 50) {

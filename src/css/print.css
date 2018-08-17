@@ -33,6 +33,12 @@
 #call-graphic-comparation-is-12 {
     margin-top: 10% !important;
 }
+
+.call-graphic-legend div.ie10up-legend {
+    margin-top: -8% !important;
+    width: 35% !important;
+
+}
 /* Fim Sistema de Chamados */
 
 /* Qualidade do Atendimento */
