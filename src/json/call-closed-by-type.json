@@ -1,0 +1,44 @@
+{
+  "cols": [{
+    "id": "",
+    "label": "Categorias",
+    "pattern": "",
+    "type": "string"
+  }, {
+    "id": "",
+    "label": "valores",
+    "pattern": "",
+    "type": "number"
+  }],
+  "rows": [{
+    "c": [{
+      "v": "Software"
+    }, {
+      "v": 2000
+    }]
+  }, {
+    "c": [{
+      "v": "Telefonia"
+    }, {
+      "v": 900
+    }]
+  }, {
+    "c": [{
+      "v": "Hardware"
+    }, {
+      "v": 500
+    }]
+  }, {
+    "c": [{
+      "v": "Acessos"
+    }, {
+      "v": 230
+    }]
+  }, {
+    "c": [{
+      "v": "Aplicativos"
+    }, {
+      "v": 50
+    }]
+  }]
+}
