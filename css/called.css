@@ -270,6 +270,19 @@ div.call-graphic-legend > div:last-of-type p:last-child:before {
     width: calc(100vw - 200px);
 }
 
+#call-table .table {
+    width: 100%;
+}
+
+.call-container-filter {
+    width: 20%;
+    margin-left: 80%;
+}
+
+#call_filter label {
+    color: transparent;
+}
+
 .pagination {
     width: calc(100vw - 600px);
     margin: 0 auto;
