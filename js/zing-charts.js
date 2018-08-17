@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     callLevelOfSatisfaction();
     callCalledClosed();
     calledClosureRegion();
@@ -376,7 +376,7 @@ function calledClosureRegion() {
 }
 
 function labelSatisfaction(id, value) {
-    let label = document.querySelector(`#${id}`);
+    let label = document.querySelector('#' + id);
     if (value <= 40) {
         label.innerText = "Ruim";
     } else if (value > 40 && value <= 50) {

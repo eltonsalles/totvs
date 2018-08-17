@@ -2,6 +2,8 @@
 <html lang="pt-br" class="has-navbar-fixed-top">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard Chamados</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -40,7 +42,7 @@
         </header>
         <main>
             <!-- Sistema de Chamados -->
-            <div class="columns is-desktop is-multiline">
+            <div class="columns is-desktop is-multiline ie10up-first-div">
                 <div class="column is-12 call-title">
                     <h2 id="call-system" class="title">Chamados</h2>
                 </div>
@@ -64,10 +66,10 @@
                 <div id="call-graphic-open-is-7" class="column is-7 call-print-center">
                     <div id="call-graphic-open" class="call-google-charts"></div>
                 </div>
-                <div id="call-graphic-comparation-is-12" class="column is-12 call-graphic-title call-graphic-legend">
+                <div id="call-graphic-comparation-is-12" class="column is-12 call-graphic-title call-graphic-legend edge-graphic-comparation-title">
                     <h3 class="title call-row-bottom call-page-break">Comparação Últimos 6 Meses</h3>
                     <div id="call-graphic-comparation" class="call-google-charts call-print-adjust-margin"></div>
-                    <div class="call-print-exact">
+                    <div class="call-print-exact ie10up-legend">
                         <p>Fechado</p>
                         <p>Previsto</p>
                     </div>
@@ -76,7 +78,7 @@
                     <h3 id="call-by-day-title" class="title">Chamados Por Dia</h3>
                     <h4 class="subtitle call-row-bottom">Média de chamados abertos por dia: <span>101</span></h4>
                     <div id="call-graphic-by-day" class="call-google-charts call-print-adjust-margin"></div>
-                    <div class="call-print-exact">
+                    <div class="call-print-exact ie10up-legend">
                         <p>Fechado</p>
                         <p>Previsto</p>
                     </div>
@@ -96,17 +98,17 @@
                     <p id="call-zing-charts-quality-service"></p>
                 </div>
                 <div id="call-quality-service-is-7" class="column is-7 call-print-center">
-                    <div id="call-level-of-satisfaction-months"></div>
+                    <div id="call-level-of-satisfaction-months" class="edge-margin-charts"></div>
                 </div>
-                <div id="call-title-sla" class="column is-12 call-container-graphic-title-zing-charts">
+                <div id="call-title-sla" class="column is-12 call-container-graphic-title-zing-charts edge-margin-charts-sla">
                     <h4 class="title is-4">Chamados Fechados Dentro do SLA</h4>
                 </div>
-                <div id="call-called-closed-is-5" class="column is-5 call-print-center">
+                <div id="call-called-closed-is-5" class="column is-5 call-print-center edge-margin-charts-sla">
                     <div id="call-called-closed"></div>
                     <p id="call-zing-charts-called-closed"></p>
                 </div>
-                <div id="call-called-closed-is-7" class="column is-7 call-print-center">
-                    <div id="call-called-closed-months"></div>
+                <div id="call-called-closed-is-7" class="column is-7 call-print-center edge-margin-charts-sla">
+                    <div id="call-called-closed-months" class="edge-margin-charts"></div>
                 </div>
             </div>
             <!-- Fim Qualidade do Atendimento -->
@@ -118,7 +120,7 @@
                 <div id="call-top-10-is-12" class="column is-12 call-graphic-title call-graphic-legend">
                     <h4 class="title is-4">Top 10 Chamados Fechados Por Departamento</h4>
                     <div id="call-top-10" class="call-google-charts call-print-adjust-margin"></div>
-                    <div class="call-print-exact">
+                    <div class="call-print-exact ie10up-legend">
                         <p>Fechado</p>
                         <p>Vencidos</p>
                     </div>
@@ -201,8 +203,9 @@
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/google-charts.js"></script>
     <script src="js/zing-charts.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

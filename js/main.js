@@ -1,44 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const navBurgers = document.querySelector('.navbar-burger');
-    const menu = document.querySelector('.navbar-menu');
-    navBurgers.addEventListener('click', () => {
-        navBurgers.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
+$(function () {
+    const navBurgers = $('.navbar-burger');
+    const menu = $('.navbar-menu');
+
+    navBurgers.on('click', function () {
+        navBurgers.toggleClass('is-active');
+        menu.toggleClass('is-active');
     });
 
-    window.addEventListener('resize', includeClass);
+    $(window).on('resize', includeClass);
     includeClass();
 
-    let navBarItems = document.querySelectorAll('.navbar-item');
-    navBarItems.forEach(function (item, index) {
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
-            navBurgers.classList.remove('is-active');
-            menu.classList.remove('is-active');
+    let navBarItems = $('.navbar-item');
+    navBarItems.eq(0).on('click', function (e) {
+        e.preventDefault();
 
-            switch (index) {
-                case 0:
-                    setTimeout(function () {
-                        window.scroll({ top: 0, left: 0, behavior: "smooth" });
-                    }, 100);
-                    break;
+        navBurgers.removeClass('is-active');
+        menu.removeClass('is-active');
 
-                case 1:
-                     setTimeout(function () {
-                        window.scroll({ top: 1686, left: 0, behavior: "smooth" });
-                    }, 100);
-                    break;
-
-                case 2:
-                    setTimeout(function () {
-                        window.scroll({ top: 2520, left: 0, behavior: "smooth" });
-                    }, 100);
-                    break;
-            }
-        });
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
     });
 
-    document.querySelector('#call-print').addEventListener('click', function () {
+    navBarItems.eq(1).on('click', function (e) {
+        e.preventDefault();
+
+        navBurgers.removeClass('is-active');
+        menu.removeClass('is-active');
+
+        $('html, body').animate({
+            scrollTop: 1695
+        }, 800);
+    });
+
+    navBarItems.eq(2).on('click', function (e) {
+        e.preventDefault();
+
+        navBurgers.removeClass('is-active');
+        menu.removeClass('is-active');
+
+        $('html, body').animate({
+            scrollTop: 2485
+        }, 800);
+    });
+
+    $('#call-print').on('click', function () {
         window.print();
     });
 
@@ -48,52 +54,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function includeClass() {
-    let callPanelIs5 = document.querySelector('#call-panel-is-5');
-    let callGraphicOpenIs7 = document.querySelector('#call-graphic-open-is-7');
-    let callGraphicComparationIs12 = document.querySelector('#call-graphic-comparation-is-12');
-    let callQualityServiceIs5 = document.querySelector('#call-quality-service-is-5');
-    let callQualityServiceIs7 = document.querySelector('#call-quality-service-is-7');
-    let callCalledClosedIs5 = document.querySelector('#call-called-closed-is-5');
-    let callCalledClosedIs7 = document.querySelector('#call-called-closed-is-7');
-    let callTop10Is12 = document.querySelector('#call-top-10-is-12');
-    let callClosedByTypeIs6 = document.querySelector('#call-closed-by-type-is-6');
-    let callClosedByProblemIs6 = document.querySelector('#call-closed-by-problem-is-6');
-    let callDistributionByDepartmentsIs6 = document.querySelector('#call-distribution-by-departments-is-6');
-    let callCalledClosureRegionIs6 = document.querySelector('#call-called-closure-region-is-6');
+    let callPanelIs5 = $('#call-panel-is-5');
+    let callGraphicOpenIs7 = $('#call-graphic-open-is-7');
+    let callGraphicComparationIs12 = $('#call-graphic-comparation-is-12');
+    let callQualityServiceIs5 = $('#call-quality-service-is-5');
+    let callQualityServiceIs7 = $('#call-quality-service-is-7');
+    let callCalledClosedIs5 = $('#call-called-closed-is-5');
+    let callCalledClosedIs7 = $('#call-called-closed-is-7');
+    let callTop10Is12 = $('#call-top-10-is-12');
+    let callClosedByTypeIs6 = $('#call-closed-by-type-is-6');
+    let callClosedByProblemIs6 = $('#call-closed-by-problem-is-6');
+    let callDistributionByDepartmentsIs6 = $('#call-distribution-by-departments-is-6');
+    let callCalledClosureRegionIs6 = $('#call-called-closure-region-is-6');
 
     if (screen.width < 1024) {
-        callPanelIs5.classList.remove('is-5');
-        callGraphicOpenIs7.classList.remove('is-7');
-        callGraphicComparationIs12.classList.remove('is-12');
-        callQualityServiceIs5.classList.remove('is-5');
-        callQualityServiceIs7.classList.remove('is-7');
-        callCalledClosedIs5.classList.remove('is-5');
-        callCalledClosedIs7.classList.remove('is-7');
-        callTop10Is12.classList.remove('is-12');
-        callClosedByTypeIs6.classList.remove('is-6');
-        callClosedByProblemIs6.classList.remove('is-6');
-        callDistributionByDepartmentsIs6.classList.remove('is-6');
-        callCalledClosureRegionIs6.classList.remove('is-6');
+        callPanelIs5.removeClass('is-5');
+        callGraphicOpenIs7.removeClass('is-7');
+        callGraphicComparationIs12.removeClass('is-12');
+        callQualityServiceIs5.removeClass('is-5');
+        callQualityServiceIs7.removeClass('is-7');
+        callCalledClosedIs5.removeClass('is-5');
+        callCalledClosedIs7.removeClass('is-7');
+        callTop10Is12.removeClass('is-12');
+        callClosedByTypeIs6.removeClass('is-6');
+        callClosedByProblemIs6.removeClass('is-6');
+        callDistributionByDepartmentsIs6.removeClass('is-6');
+        callCalledClosureRegionIs6.removeClass('is-6');
     } else {
-        callPanelIs5.classList.add('is-5');
-        callGraphicOpenIs7.classList.add('is-7');
-        callGraphicComparationIs12.classList.add('is-12');
-        callQualityServiceIs5.classList.add('is-5');
-        callQualityServiceIs7.classList.add('is-7');
-        callCalledClosedIs5.classList.add('is-5');
-        callCalledClosedIs7.classList.add('is-7');
-        callTop10Is12.classList.add('is-12');
-        callClosedByTypeIs6.classList.add('is-6');
-        callClosedByProblemIs6.classList.add('is-6');
-        callDistributionByDepartmentsIs6.classList.add('is-6');
-        callCalledClosureRegionIs6.classList.add('is-6');
+        callPanelIs5.addClass('is-5');
+        callGraphicOpenIs7.addClass('is-7');
+        callGraphicComparationIs12.addClass('is-12');
+        callQualityServiceIs5.addClass('is-5');
+        callQualityServiceIs7.addClass('is-7');
+        callCalledClosedIs5.addClass('is-5');
+        callCalledClosedIs7.addClass('is-7');
+        callTop10Is12.addClass('is-12');
+        callClosedByTypeIs6.addClass('is-6');
+        callClosedByProblemIs6.addClass('is-6');
+        callDistributionByDepartmentsIs6.addClass('is-6');
+        callCalledClosureRegionIs6.addClass('is-6');
     }
 }
 
 function countDrawCharts() {
     numberDrawCharts++;
     if (numberDrawCharts >= 12) {
-        document.querySelector('#call-loading-charts').classList.remove('is-active');
+        $('#call-loading-charts').removeClass('is-active');
     }
 }
 
