@@ -12,12 +12,16 @@
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-html-replace": "^1.6.2",
     "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^2.1.0",
     "gulp-uglify": "^1.5.4",
-    "gulp-usemin": "^0.3.29"
+    "gulp-usemin": "^0.3.29",
+    "jshint": "^2.9.6"
   }
 }

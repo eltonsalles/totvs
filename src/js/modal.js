@@ -7,7 +7,7 @@ $(function () {
 });
 
 function callOpenAllModal() {
-    modal('#call-open-all-modal', 'Chamados Abertos', null)
+    modal('#call-open-all-modal', 'Chamados Abertos', null, null);
 }
 
 function modal(idBtnOpen, title, table, pagination) {

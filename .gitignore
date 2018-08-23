@@ -1,8 +1,2 @@
 .idea
-/dist/css/called.css
-/dist/css/print.css
-/dist/js/google-charts.js
-/dist/js/main.js
-/dist/js/modal.js
-/dist/js/zing-charts.js
 /node_modules
