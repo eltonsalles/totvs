@@ -7,11 +7,12 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     csslint = require('gulp-csslint'),
     jshint = require('gulp-jshint'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    babel = require('gulp-babel');
 
-// Tarefa default que antes de chamar usemin e deleteFiles espera a tarefa copy
+// Tarefa default que chama as tarefa prod e deleteFiles depois que a tarefa copy terminar
 gulp.task('default', ['copy'], function() {
-    gulp.start('usemin', 'deleteFiles');
+    gulp.start('prod', 'deleteFiles');
 });
 
 // Deleta os arquivos que não são mais necessários na pasta dist
@@ -20,6 +21,7 @@ gulp.task('deleteFiles', function () {
         'dist/css/called.css',
         'dist/css/print.css',
         'dist/sass',
+        'dist/js/ecmas6',
         'dist/js/libs/jquery.min.js',
         'dist/js/google-charts.js',
         'dist/js/main.js',
@@ -29,31 +31,40 @@ gulp.task('deleteFiles', function () {
         .pipe(clean());
 });
 
-// Tarefa para copiar de src para dist depois que a pasta dist for apagada
-gulp.task('copy', ['clean', 'sassProd'], function() {
+// Copia de src para dist depois que a pasta dist (antiga) for apagada
+gulp.task('copy', ['clean', 'sassProd', 'transpilerJs'], function() {
     return gulp.src('src/**/*')
         .pipe(gulp.dest('dist'));
 });
 
-// Tarefa para apagar a pasta dist
+// Apaga a pasta dist (antiga)
 gulp.task('clean', function() {
     return gulp.src('dist')
         .pipe(clean());
 });
 
-// Tarefa para trasnformar Sass em CSS (Produção)
+// Trasnforma Sass em CSS (minificado)
 gulp.task('sassProd', function () {
-    return gulp.src('src/sass/**/*.scss')
+    return gulp.src('src/css/sass/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('src/css'));
 });
 
+// Converte o js ecmas6 para ecmas5
+gulp.task('transpilerJs', function () {
+    return gulp.src('src/js/ecmas6/**/*.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(gulp.dest('src/js'));
+});
+
 // Tarefa para preparar os arquivos para produção.
-// O usemin concatena os arquivos
+// O usemin concatena os arquivos (conforme o comentário no html)
 // O uglify minifica os js
 // O autoprefixer coloca os prefixos nas propriedades para dar suporte a navegadores antigos
 // O cssmin minifica o css
-gulp.task('usemin', function() {
+gulp.task('prod', function() {
   return gulp.src('dist/**/*.html')
     .pipe(usemin({
       js: [uglify().on('error', function(e){
@@ -76,15 +87,17 @@ gulp.task('server', function() {
     gulp.watch('src/**/*').on('change', browserSync.reload);
 
     // Faz uma validação do js
-    gulp.watch('src/js/**/*.js').on('change', function(event) {
+    gulp.watch('src/js/ecmas6/**/*.js').on('change', function(event) {
         console.log("#################### JS " + event.path + ' ####################');
         gulp.src(event.path)
-            .pipe(jshint())
+            .pipe(jshint({
+                esversion: 6
+            }))
             .pipe(jshint.reporter('default'));
     });
 
     // Transforma Sass em CSS
-    gulp.watch('src/sass/**/*.scss').on('change', function (event) {
+    gulp.watch('src/css/sass/**/*.scss').on('change', function (event) {
         console.log("#################### SASS " + event.path + " ####################");
         gulp.src(event.path)
             .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
