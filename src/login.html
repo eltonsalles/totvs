@@ -5,30 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
+    <link rel="icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- build:css assets/css/login.min.css -->
     <link rel="stylesheet" href="assets/css/libs/normalize.css">
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="assets/css/login.css">
+    <!-- endbuild -->
 </head>
 <body class="body-background">
     <main class="container">
-        <picture class="container-img">
-            <img src="assets/images/multi-control.svg" class="img-responsive container-img__logo-login">
+        <picture class="container-img-login">
+            <img src="assets/images/multi-control.svg" class="img-responsive">
         </picture>
         <form class="container__form">
             <div class="container-input">
                 <label for="usuario" class="container-input__label">Usuário</label>
-                <input id="usuario" class="container-input__input" type="text" name="usuario" maxlength="255" required>
+                <input id="usuario" class="container-input__input" type="text" name="usuario" maxlength="255">
                 <i class="fas fa-user container-input__icon"></i>
             </div>
             <div class="container-input">
                 <label for="senha" class="container-input__label">Senha</label>
-                <input id="senha" class="container-input__input" type="text" name="senha" maxlength="255" required>
+                <input id="senha" class="container-input__input" type="text" name="senha" maxlength="255">
                 <i class="fas fa-lock container-input__icon"></i>
             </div>
-            <button class="btn form__btn-login" type="submit">Acessar</button>
+            <button class="btn" type="button">Acessar</button>
         </form>
     </main>
+    <!-- build:js assets/css/login.min.js -->
+    <script src="assets/js/login.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

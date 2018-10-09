@@ -3,14 +3,20 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    opacity: 0;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 2s ease-out;
 }
 
 /* Imagem */
-.container-img {
+.container-img-login {
     margin: 15% 0;
 }
 
-.container-img__logo-login {
+.container-img-login img {
     max-width: 242px;
 }
 /* Fim Imagem */
@@ -46,7 +52,7 @@
 .container-input__label--change-label-position {
     font-size: 0.8em;
     margin-top: -2%;
-    transition: margin-top 300ms, font-size 300ms, background 300ms;
+    transition: margin-top 300ms, font-size 300ms;
 }
 
 .container-input__input {
@@ -57,7 +63,7 @@
     border: 0.0625em solid #707070;
     background: #707070;
     padding: 0 2% 0 13%;
-
+    color: #fff;
 }
 
 .container-input__input:focus {
@@ -81,7 +87,7 @@
     background: #fff;
 }
 
-.form__btn-login {
+.container__form button {
     margin-top: 5%;
 }
 /* Fim Form */
