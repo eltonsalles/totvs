@@ -1,0 +1,33 @@
+.container-validacao {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-items: center;
+}
+
+.validacao__icon {
+    margin: 20% auto 10%;
+    text-align: center;
+    font-size: 15em;
+    color: #82C342;
+}
+
+.confirmacao__descricao {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.7em;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.confirmacao__btn {
+    text-transform: uppercase;
+    border-radius: 0.3125em;
+    border: 0.0625em solid #82C342;
+    padding: 4% 2%;
+    cursor: pointer;
+    width: 80%;
+    margin: 10% auto;
+    color: #82C342;
+    background: #fff;
+}

@@ -1,0 +1,99 @@
+/* Main */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+/* Imagem */
+.container-img {
+    margin: 15% 0;
+}
+
+.container-img__logo-login {
+    max-width: 242px;
+}
+/* Fim Imagem */
+
+/* Form */
+.container__form {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.container-input {
+    position: relative;
+    color: #fff;
+    height: 3.4375em;
+}
+
+.container-input + .container-input {
+    margin-top: 5%;
+}
+
+.container-input > * {
+    position: absolute;
+}
+
+.container-input__label {
+    z-index: 100;
+    top: 0;
+    left: 13%;
+    margin-top: 3.3%;
+}
+
+.container-input__label--change-label-position {
+    font-size: 0.8em;
+    margin-top: -2%;
+    transition: margin-top 300ms, font-size 300ms, background 300ms;
+}
+
+.container-input__input {
+    line-height: 2.5;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.3125em;
+    border: 0.0625em solid #707070;
+    background: #707070;
+    padding: 0 2% 0 13%;
+
+}
+
+.container-input__input:focus {
+    outline-color: transparent;
+}
+
+.container-input__icon {
+    z-index: 100;
+    left: 4%;
+    margin-top: 3%;
+}
+
+.btn {
+    color: #000;
+    text-transform: uppercase;
+    border-radius: 0.3125em;
+    padding: 4% 2%;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    background: #fff;
+}
+
+.form__btn-login {
+    margin-top: 5%;
+}
+/* Fim Form */
+/* Fim Main*/
+
+@media (min-width: 600px) {
+    .container-input__label {
+        left: 10%;
+        margin-top: 3%;
+    }
+
+    .container-input__input {
+        padding-left: 10%;
+    }
+}

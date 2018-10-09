@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Totvs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/leitura-codigo-barras.css">
+</head>
+<body>
+    <main class="container">
+        <div id="interactive" class="viewport"></div>
+        <p class="container__codigo-barra">Código de barras: <span class="found"></span></p>
+        <hr class="line">
+        <div class="container-btn">
+            <button class="btn form__btn-login" type="submit">Digite o código de barras</button>
+        </div>
+    </main>
+    <script src="js/libs/quagga.min.js"></script>
+    <script src="js/codigoBarras.js"></script>
+</body>
+</html>

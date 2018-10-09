@@ -1,0 +1,57 @@
+.container {
+    padding-top: 5%;
+    box-sizing: border-box;
+}
+
+.container__codigo-barra {
+    margin: 10% 5% 0;
+}
+
+.container__codigo-barra span {
+    font-weight: bold;
+    letter-spacing: 0.0625em;
+}
+
+.container-btn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5.1875em;
+    background: rgba(49, 53, 60, 0.6);
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 80%;
+    margin: 5% auto;
+    border-radius: 0.3125em;
+    padding: 4% 2%;
+    border: 0;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+.line {
+    position: relative;
+    z-index: 10;
+    margin-top: -75%;
+    height: 0.25em;
+    background: red;
+    border: none;
+}
+
+#interactive {
+    width: 90%;
+    height: 25em;
+    margin: 0 auto;
+    background: #000;
+}
+
+canvas.drawingBuffer {
+    display: none;
+}

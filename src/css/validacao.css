@@ -1,0 +1,48 @@
+.container-confirmacao {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-items: center;
+}
+
+.interrogacao {
+    width: 165px;
+    height: 165px;
+    margin: 20% auto;
+    text-align: center;
+    font-size: 5em;
+    line-height: 2em;
+    font-weight: bold;
+    color: #82C342;
+    border-radius: 50%;
+    border: 0.1875em solid #82C342;
+}
+
+.confirmacao__descricao {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.7em;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.confirmacao__btn {
+    text-transform: uppercase;
+    border-radius: 0.3125em;
+    padding: 4% 2%;
+    border: 0;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.btn-confirmacao {
+    color: #fff;
+    background: #82C342;
+}
+
+.btn-voltar {
+    color: #fff;
+    background: #aeaeae;
+}

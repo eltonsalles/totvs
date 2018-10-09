@@ -1,0 +1,146 @@
+/* Main */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+/* Título */
+.container__title {
+    display: flex;
+    align-items: center;
+    background: #272A2F;
+    color: #fff;
+    text-align: center;
+    min-height: 5em;
+}
+
+.container__title h1 {
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.container__title span {
+    flex: 2;
+    font-style: italic;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+.container__title i {
+    padding-right: 5%;
+    font-size: 1.5em;
+}
+/* Fim Título */
+
+/* Form */
+.container__form {
+    width: 90%;
+    min-height: 2.3125em;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+.container-input {
+    position: relative;
+}
+
+.container-input > * {
+    position: absolute;
+}
+
+.container-input__label {
+    z-index: 100;
+    top: 0;
+    left: 13%;
+    margin-top: 5%;
+}
+
+.container-input__label--change-label-position {
+    font-size: 0.8em;
+    margin-top: -2%;
+    background: #fff;
+    transition: margin-top 300ms, font-size 300ms, background 300ms;
+}
+
+.container-input__input {
+    line-height: 2.5;
+    width: 100%;
+    height: 3.4375em;
+    box-sizing: border-box;
+    border-radius: 0.3125em;
+    border: 0.0625em solid #272A2F;
+    padding: 0 2% 0 13%;
+
+}
+
+.container-input__input:focus {
+    outline-color: transparent;
+}
+
+.container-input__icon {
+    z-index: 100;
+    left: 4%;
+    margin-top: 5%;
+}
+/* Fim Form */
+
+/* Lista Pallets */
+.lista-pallet {
+    display: flex;
+    flex-flow: wrap;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.lista-pallet > * {
+    flex: 1 100%;
+}
+
+.lista-pallet__title {
+    text-align: center;
+    font-size: 1.2em;
+    min-height: 3.625em;
+}
+
+.lista-pallet__title h3 {
+    margin-bottom: 3%;
+}
+
+.lista-pallet__detalhes-produto {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    min-height: 7.9375em;
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 0.3125em;
+    border: 0.0625em solid #272A2F;
+}
+
+.lista-pallet__detalhes-produto + .lista-pallet__detalhes-produto {
+    margin-top: 5%;
+}
+
+.lista-pallet__detalhes-produto img {
+    max-width: 81px;
+    margin: 0;
+    flex: 1;
+}
+
+.lista-pallet__detalhes-produto div {
+    flex: 2;
+}
+
+.lista-pallet__detalhes-produto div span {
+    font-size: 0.7em;
+    padding: 0 5%;
+}
+
+.lista-pallet__detalhes-produto div p {
+    margin: 0;
+    font-size: 0.9em;
+    padding: 1% 5% 0;
+}
+/* Fim  Lista Pallets */
+/* Fim Main */
