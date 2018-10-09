@@ -19,15 +19,15 @@
         <picture class="container-img-login">
             <img src="assets/images/multi-control.svg" class="img-responsive">
         </picture>
-        <form class="container__form">
+        <form class="container__form" novalidate>
             <div class="container-input">
                 <label for="usuario" class="container-input__label">Usuário</label>
-                <input id="usuario" class="container-input__input" type="text" name="usuario" maxlength="255">
+                <input id="usuario" class="container-input__input" type="text" name="usuario" maxlength="255" autocomplete="off">
                 <i class="fas fa-user container-input__icon"></i>
             </div>
             <div class="container-input">
                 <label for="senha" class="container-input__label">Senha</label>
-                <input id="senha" class="container-input__input" type="text" name="senha" maxlength="255">
+                <input id="senha" class="container-input__input" type="text" name="senha" maxlength="255" autocomplete="off">
                 <i class="fas fa-lock container-input__icon"></i>
             </div>
             <button class="btn" type="button">Acessar</button>
@@ -35,6 +35,7 @@
     </main>
     <!-- build:js assets/css/login.min.js -->
     <script src="assets/js/login.js"></script>
+    <script src="assets/js/form-label.js"></script>
     <!-- endbuild -->
 </body>
 </html>
