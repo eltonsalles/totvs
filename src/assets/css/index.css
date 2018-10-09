@@ -5,4 +5,14 @@
 
 .container__img {
     max-width: 230px;
+    animation: fadeInOut 1s linear infinite;
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 1;
+    }
 }
