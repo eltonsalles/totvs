@@ -12,6 +12,23 @@
     letter-spacing: 0.0625em;
 }
 
+.container__video {
+    display: block;
+    width: 90%;
+    height: 25em;
+    margin: 0 auto;
+    background: #000;
+}
+
+.container__line {
+    position: relative;
+    z-index: 10;
+    margin-top: -75%;
+    height: 0.25em;
+    background: red;
+    border: none;
+}
+
 .container-btn {
     position: fixed;
     left: 0;
@@ -22,36 +39,14 @@
 }
 
 .btn {
-    position: relative;
-    z-index: 1;
     display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    background: #fff;
+    padding: 5%;
     width: 80%;
     margin: 5% auto;
-    border-radius: 0.3125em;
-    padding: 4% 2%;
-    border: 0;
-    cursor: pointer;
-    background: #fff;
-    color: #000;
-    font-weight: bold;
-}
-
-.line {
-    position: relative;
-    z-index: 10;
-    margin-top: -75%;
-    height: 0.25em;
-    background: red;
-    border: none;
-}
-
-#interactive {
-    width: 90%;
-    height: 25em;
-    margin: 0 auto;
-    background: #000;
-}
-
-canvas.drawingBuffer {
-    display: none;
+    border-radius: 5px;
 }

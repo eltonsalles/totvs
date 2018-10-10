@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Totvs</title>
+    <link rel="icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- build:css assets/css/leitura-codigo-barras.min.css -->
     <link rel="stylesheet" href="assets/css/libs/normalize.css">
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="assets/css/leitura-codigo-barras.css">
+    <!-- endbuild -->
 </head>
 <body>
     <main class="container">
-        <div id="interactive" class="viewport"></div>
+        <video id="video" class="container__video"></video>
         <p class="container__codigo-barra">Código de barras: <span class="found"></span></p>
-        <hr class="line">
+        <hr class="container__line">
         <div class="container-btn">
-            <button class="btn form__btn-login" type="submit">Digite o código de barras</button>
+            <a href="escrita-codigo-barras.html" class="btn">Digite o código de barras</a>
         </div>
     </main>
-    <script src="assets/js/libs/quagga.min.js"></script>
-    <script src="assets/js/codigoBarras.js"></script>
+    <script src="assets/js/libs/zxing.min.js"></script>
+    <!-- build:js assets/js/leitura-codigo-barras.min.js -->
+    <script src="assets/js/leitura-codigo-barras.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
