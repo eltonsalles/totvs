@@ -12,27 +12,33 @@ var gulp = require('gulp'),
 
 // Tarefa default que chama as tarefa prod e deleteFiles depois que a tarefa copy terminar
 gulp.task('default', ['copy'], function() {
-    gulp.start('prod', 'deleteFiles');
+    gulp.start('prod');
 });
 
 // Deleta os arquivos que não são mais necessários na pasta dist
-gulp.task('deleteFiles', function () {
+gulp.task('deleteFiles', ['transpilerJs'], function () {
     return gulp.src([
-        'dist/css/called.css',
-        'dist/css/print.css',
-        'dist/sass',
-        'dist/js/ecmas6',
-        'dist/js/libs/jquery.min.js',
-        'dist/js/google-charts.js',
-        'dist/js/main.js',
-        'dist/js/modal.js',
-        'dist/js/zing-charts.js',
+        'dist/assets/css/confirmacao.css',
+        'dist/assets/css/escrita-codigo-barras.css',
+        'dist/assets/css/geral.css',
+        'dist/assets/css/index.css',
+        'dist/assets/css/leitura-codigo-barras.css',
+        'dist/assets/css/lista-pallets.css',
+        'dist/assets/css/login.css',
+        'dist/assets/css/validacao.css',
+        'dist/assets/js/escrita-codigo-barras.js',
+        'dist/assets/js/form-label.js',
+        'dist/assets/js/index.js',
+        'dist/assets/js/leitura-codigo-barras.js',
+        'dist/assets/js/lista-pallets.js',
+        'dist/assets/js/login.js',
+        'dist/assets/js/validacao.js',
     ])
         .pipe(clean());
 });
 
 // Copia de src para dist depois que a pasta dist (antiga) for apagada
-gulp.task('copy', ['clean', 'sassProd', 'transpilerJs'], function() {
+gulp.task('copy', ['clean'], function() {
     return gulp.src('src/**/*')
         .pipe(gulp.dest('dist'));
 });
@@ -43,20 +49,14 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-// Trasnforma Sass em CSS (minificado)
-gulp.task('sassProd', function () {
-    return gulp.src('src/css/sass/**/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('src/css'));
-});
-
 // Converte o js ecmas6 para ecmas5
 gulp.task('transpilerJs', function () {
-    return gulp.src('src/js/ecmas6/**/*.js')
+    return gulp.src('dist/assets/js/*.min.js')
         .pipe(babel({
             presets: ['env']
         }))
-        .pipe(gulp.dest('src/js'));
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/assets/js'));
 });
 
 // Tarefa para preparar os arquivos para produção.
@@ -67,9 +67,6 @@ gulp.task('transpilerJs', function () {
 gulp.task('prod', function() {
   return gulp.src('dist/**/*.html')
     .pipe(usemin({
-      js: [uglify().on('error', function(e){
-          console.log(e);
-      })],
       css: [autoprefixer, cssmin]
     }))
     .pipe(gulp.dest('dist'));
