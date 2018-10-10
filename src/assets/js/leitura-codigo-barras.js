@@ -1,13 +1,26 @@
-const codeReader = new ZXing.BrowserBarcodeReader(ZXing.BarcodeFormat.EAN_13);
+Quagga.init({
+  inputStream: {
+    name: "Live",
+    type: "LiveStream",
+    constraints: {
+      width: 324,
+      height: 400,
+      facingMode: "environment"
+    }
+  },
+  locator: {
+    patchSize: "medium",
+    halfSample: true
+  },
+  numOfWorkers: 4,
+  locate: true,
+  decoder : {
+    readers: ["ean_reader"]
+  }
+}, function() {
+  Quagga.start();
+});
 
-codeReader.getVideoInputDevices()
-  .then(videoInputDevices => {
-    const firstDeviceId = videoInputDevices[0].deviceId;
-
-    codeReader.decodeFromInputVideoDevice(firstDeviceId, 'video')
-      .then(result => {
-        document.querySelector('.found').textContent = result.text;
-      })
-      .catch(err => console.error(err));
-  })
-  .catch(err => console.error(err));
+Quagga.onDetected(function(result) {
+  document.querySelector(".found").innerHTML = result.codeResult.code;
+});
