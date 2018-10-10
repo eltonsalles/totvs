@@ -117,10 +117,15 @@
     box-sizing: border-box;
     border-radius: 0.3125em;
     border: 0.0625em solid #272A2F;
+    cursor: pointer;
 }
 
 .lista-pallet__detalhes-produto + .lista-pallet__detalhes-produto {
     margin-top: 5%;
+}
+
+.lista-pallet__detalhes-produto:last-of-type {
+    margin-bottom: 5%;
 }
 
 .lista-pallet__detalhes-produto img {
@@ -143,5 +148,30 @@
     font-size: 0.9em;
     padding: 1% 5% 0;
 }
+
+.lista-pallet__detalhes-produto--invisivel {
+    display: none;
+}
 /* Fim  Lista Pallets */
 /* Fim Main */
+
+/* Ajustes para tela em modo paisagem */
+@media (min-width: 600px) {
+    .container-input__label {
+        left: 10%;
+        margin-top: 3%;
+    }
+
+    .container-input__input {
+        padding-left: 10%;
+    }
+
+    .container-input__label--change-label-position {
+        margin-top: -1.1%;
+    }
+
+    .container-input__icon {
+        margin-top: 3.2%;
+    }
+}
+/* Fim Ajustes para tela em modo paisagem */
