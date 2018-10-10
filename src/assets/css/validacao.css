@@ -27,6 +27,7 @@
 }
 
 .confirmacao__btn {
+    box-sizing: border-box;
     text-transform: uppercase;
     border-radius: 0.3125em;
     padding: 4% 2%;
@@ -34,7 +35,9 @@
     cursor: pointer;
     width: 40%;
     margin-top: 20%;
-    margin-left: 5%;
+    margin-left: 6.5%;
+    text-decoration: none;
+    text-align: center;
 }
 
 .btn-confirmacao {
