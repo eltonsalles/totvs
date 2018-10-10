@@ -93,6 +93,7 @@
 /* Fim Form */
 /* Fim Main*/
 
+/* Ajustes para tela em modo paisagem */
 @media (min-width: 600px) {
     .container-input__label {
         left: 10%;
@@ -103,3 +104,4 @@
         padding-left: 10%;
     }
 }
+/* Fim Ajustes para tela em modo paisagem */
