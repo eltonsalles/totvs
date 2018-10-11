@@ -14,20 +14,15 @@
 
 .container__video {
     width: 90%;
-    height: 25em;
+    height: 20.25em;
     margin: 0 auto;
     background: #000;
-}
-
-.container__video video {
-    display: block;
-    margin: 0 auto;
 }
 
 .container__line {
     position: relative;
     z-index: 10;
-    margin-top: -75%;
+    margin-top: -65%;
     height: 0.25em;
     background: red;
     border: none;
