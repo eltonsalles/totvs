@@ -46,3 +46,16 @@
     margin: 10% auto 0;
     background: #82C342;
 }
+
+/* Ajustes para tela em modo paisagem */
+@media (min-width: 600px) {
+    .form__icon {
+        margin-top: 25%;
+        margin-right: 8%;
+    }
+
+    .form__btn {
+        margin-bottom: 5%;
+    }
+}
+/* Fim Ajustes para tela em modo paisagem */

@@ -49,3 +49,11 @@
     color: #fff;
     background: #aeaeae;
 }
+
+/* Ajustes para tela em modo paisagem */
+@media (min-width: 600px) {
+    .confirmacao__btn {
+        margin-bottom: 5%;
+    }
+}
+/* Fim Ajustes para tela em modo paisagem */

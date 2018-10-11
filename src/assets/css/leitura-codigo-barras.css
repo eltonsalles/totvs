@@ -19,6 +19,11 @@
     background: #000;
 }
 
+.container__video video {
+    display: block;
+    margin: 0 auto;
+}
+
 .container__line {
     position: relative;
     z-index: 10;
@@ -53,3 +58,20 @@
 canvas.drawingBuffer {
     display: none;
 }
+
+/* Ajustes para tela em modo paisagem */
+@media (min-width: 600px) {
+    .container__video {
+        height: 10em;
+    }
+
+    .container__codigo-barra {
+        margin: 4% 5% 0;
+    }
+
+    .btn {
+        margin: 3% auto;
+        padding: 2%;
+    }
+}
+/* Fim Ajustes para tela em modo paisagem */
