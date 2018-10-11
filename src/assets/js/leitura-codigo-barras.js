@@ -1,3 +1,5 @@
+"use strict";
+
 Quagga.init({
   inputStream: {
     name: "Live",
@@ -14,13 +16,13 @@ Quagga.init({
   },
   numOfWorkers: 4,
   locate: true,
-  decoder : {
+  decoder: {
     readers: ["ean_reader"]
   }
-}, function() {
+}, function () {
   Quagga.start();
 });
 
-Quagga.onDetected(function(result) {
+Quagga.onDetected(function (result) {
   document.querySelector(".found").innerHTML = result.codeResult.code;
 });

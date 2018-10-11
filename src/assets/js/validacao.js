@@ -1,5 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.btn-confirmacao').addEventListener('click', event => {
+'use strict';
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.btn-confirmacao').addEventListener('click', function (event) {
     event.preventDefault();
 
     // Confirmar o pallet e tirar da lista

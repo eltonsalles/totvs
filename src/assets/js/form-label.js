@@ -1,16 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let inputs = document.querySelectorAll('input');
-  inputs.forEach(input => {
-    let label = document.querySelector(`label[for=${input.id}]`);
-    input.addEventListener('input', () => {
+'use strict';
+
+document.addEventListener('DOMContentLoaded', function () {
+  var inputs = document.querySelectorAll('input');
+  inputs.forEach(function (input) {
+    var label = document.querySelector('label[for=' + input.id + ']');
+    input.addEventListener('input', function () {
       addClassLabel(label);
     });
 
-    input.addEventListener('focus', () => {
+    input.addEventListener('focus', function () {
       addClassLabel(label);
     });
 
-    input.addEventListener('blur', () => {
+    input.addEventListener('blur', function () {
       if (!input.value) {
         removeClassLabel(label);
       }

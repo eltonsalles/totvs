@@ -51,12 +51,11 @@ gulp.task('clean', function() {
 
 // Converte o js ecmas6 para ecmas5
 gulp.task('transpilerJs', function () {
-    return gulp.src('dist/assets/js/*.min.js')
+    return gulp.src('src/assets/js/*.js')
         .pipe(babel({
             presets: ['env']
         }))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/assets/js'));
+        .pipe(gulp.dest('src/assets/js'));
 });
 
 // Tarefa para preparar os arquivos para produção.
